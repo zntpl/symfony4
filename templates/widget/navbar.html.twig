@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="./">
+        <img alt="Symfony logo" style="width: 32px;" src="/resource/image/sf-positive.svg"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <div class="collapse navbar-collapse justify-content-between" id="navbar">
+            <div class="navbar-nav">
+                {{ widget('PhpLab\\Web\\Widgets\\NavbarMenuWidget') }}
+                <div class="nav-item dropdown">
+                    {% include 'navbar/dropdown.html.twig' %}
+                </div>
+            </div>
+            <div class="navbar-nav">
+                {% if app.user %}
+                    <div class="nav-item dropdown">
+                        {% include '@Notify/navbar_item.html.twig' %}
+                    </div>
+                    <div class="nav-item dropdown">
+                        {% include '@Messenger/navbar_item.html.twig' %}
+                    </div>
+                {% endif %}
+                <div class="nav-item dropdown">
+                    {% include '@User/navbar_item.html.twig' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

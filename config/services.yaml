@@ -1,0 +1,132 @@
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    App\:
+        resource: '../src/*'
+        exclude: '../src/{DependencyInjection,Entity,Migrations,Migration,Tests,Bootstrap,Kernel.php}'
+
+    PhpLab\Web\:
+        resource: '../vendor/php7lab/web/src/*'
+        exclude: '../vendor/php7lab/web/src/{Base}'
+
+    PhpLab\Sandbox\:
+        resource: '../vendor/php7lab/sandbox/src/*'
+        exclude: '../vendor/php7lab/sandbox/src/{*/Yii,*/Domain/Migrations,*/Domain/Fixtures}'
+
+    PhpBundle\Article\:
+        resource: '../vendor/php7bundle/article/src/*'
+        exclude: '../vendor/php7bundle/article/src/{*/Migrations,*/Fixtures}'
+
+    PhpBundle\Crypt\:
+        resource: '../vendor/php7bundle/crypt/src/*'
+        exclude: '../vendor/php7bundle/crypt/src/{*/Migrations,*/Fixtures}'
+
+    PhpBundle\Notify\:
+        resource: '../vendor/php7bundle/notify/src/*'
+        exclude: '../vendor/php7bundle/notify/src/{*/Migrations,*/Fixtures}'
+
+    PhpBundle\Queue\:
+        resource: '../vendor/php7bundle/queue/src/*'
+        exclude: '../vendor/php7bundle/queue/src/{*/Migrations,*/Fixtures}'
+
+    PhpBundle\Reference\:
+        resource: '../vendor/php7bundle/reference/src/*'
+        exclude: '../vendor/php7bundle/reference/src/{*/Migrations,*/Fixtures}'
+
+    PhpBundle\Storage\:
+        resource: '../vendor/php7bundle/storage/src/*'
+        exclude: '../vendor/php7bundle/storage/src/{*/Migrations,*/Fixtures}'
+
+    PhpBundle\User\:
+        resource: '../vendor/php7bundle/user/src/*'
+        exclude: '../vendor/php7bundle/user/src/{*/Migrations,*/Fixtures}'
+
+    PhpBundle\Article\Symfony\Api\Controllers\ArticleController:
+        tags: ['controller.service_arguments']
+
+#    PhpBundle\Article\Symfony\Web\Controllers\ArticleController:
+#        tags: ['controller.service_arguments']
+
+#    PhpLab\Bundle\:
+#        resource: '../vendor/php7lab/bundle/src/*'
+#        exclude: '../vendor/php7lab/bundle/src/{*/Yii,*/Migrations,*/Fixtures}'
+
+    # add more service definitions when explicit configuration is needed
+    # please note that last definitions always *replace* previous ones
+
+#    PhpBundle\Storage\Symfony\Api\Controllers\FileController:
+#        tags: ['controller.service_arguments']
+
+    PhpLab\Sandbox\Messenger\Symfony\Api\Controllers\ChatController:
+        tags: ['controller.service_arguments']
+
+    PhpLab\Sandbox\Messenger\Symfony\Api\Controllers\MessageController:
+        tags: ['controller.service_arguments']
+
+    PhpLab\Sandbox\Messenger\Symfony\Web\Controllers\MessageController:
+        tags: ['controller.service_arguments']
+
+    PhpLab\Sandbox\Messenger\Domain\Interfaces\ChatRepositoryInterface:
+        class: PhpLab\Sandbox\Messenger\Domain\Repositories\Eloquent\ChatRepository
+        public: true
+
+    PhpBundle\User\Domain\Interfaces\UserRepositoryInterface:
+        class: PhpBundle\User\Domain\Repositories\Eloquent\UserRepository
+        public: true
+
+#    PhpLab\Sandbox\Bot\Symfony\Api\Controllers\ChatController:
+#        tags: ['controller.service_arguments']
+
+#    PhpLab\Sandbox\Messenger\Symfony\Web\Controllers\ChatController:
+#        tags: ['controller.service_arguments']
+
+#    PhpBundle\User\Symfony\Api\Controllers\AuthController:
+#        tags: ['controller.service_arguments']
+
+#    PhpBundle\Queue\Symfony\Commands\RunCommand:
+#        tags: ['controller.service_arguments']
+
+    PhpLab\Eloquent\Db\Helpers\Manager:
+        arguments:
+            $mainConfigFile: '%env(ELOQUENT_CONFIG_FILE)%'
+
+    PhpLab\Dev\Package\Domain\Repositories\File\GroupRepository:
+        arguments:
+            $fileName: '%env(ELOQUENT_CONFIG_FILE)%'
+
+    PhpLab\Rest\Controllers\ExceptionController:
+        public: true
+        arguments:
+            $debug: '%kernel.debug%'
+
+    PhpBundle\Notify\Domain\Interfaces\Repositories\EmailRepositoryInterface:
+        class: PhpBundle\Notify\Domain\Repositories\Dev\EmailRepository
+        public: true
+
+    PhpLab\Sandbox\Dashboard\Domain\Interfaces\Services\DocServiceInterface:
+        class: PhpLab\Sandbox\Dashboard\Domain\Services\DocService
+        public: true
+
+    PhpLab\Sandbox\Messenger\Domain\Interfaces\Services\MessageServiceInterface:
+        class: PhpLab\Sandbox\Messenger\Domain\Services\MessageService
+        public: true
+
+    PhpBundle\Article\Domain\Interfaces\PostRepositoryInterface:
+        class: PhpBundle\Article\Domain\Repositories\Eloquent\PostRepository
+        public: true
+
+#    PhpBundle\Crypt\Domain\Interfaces\Services\JwtServiceInterface:
+#            class: PhpBundle\Crypt\Domain\Services\JwtService
+#            public: true

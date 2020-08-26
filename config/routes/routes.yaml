@@ -1,0 +1,57 @@
+
+# API
+
+api_dashboard:
+    prefix: 'api'
+    resource: "@DashboardBundle/Api/config/routes.yaml"
+
+api_article:
+    prefix: 'api/v1'
+    resource: "@ArticleBundle/Api/config/routes.yaml"
+
+api_storage:
+    prefix: 'api/v1'
+    resource: "@StorageBundle/Api/config/routes.yaml"
+
+api_messenger:
+    prefix: 'api/v1'
+    resource: "@MessengerBundle/Api/config/routes.yaml"
+
+api_user:
+    prefix: 'api/v1'
+    resource: "@UserBundle/Api/config/routes.yaml"
+
+api_bot:
+    prefix: 'api/v1'
+    resource: "../../vendor/php7lab/sandbox/src/Bot/Symfony/Api/config/routes.yaml"
+
+# Web
+
+default:
+    path: /
+    controller: App\Bundle\Dashboard\Web\Controllers\MainController::index
+
+test:
+    path: test
+    controller: App\Bundle\Dashboard\Web\Controllers\MainController::test
+
+web_article:
+    resource: "@ArticleBundle/Web/config/routes.yaml"
+
+web_messenger:
+    resource: "@MessengerBundle/Web/config/routes.yaml"
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+# Admin panel
+
+admin_dashboard:
+    prefix: 'admin'
+    resource: "../../src/Bundle/Dashboard/Admin/config/routes.yaml"
+
+# WSDL
+
+api_wsdl:
+    prefix: 'wsdl'
+    resource: "@WsdlBundle/Api/config/routes.yaml"
