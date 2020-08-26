@@ -1,30 +1,34 @@
 {
-    "type": "project",
+    "type": "zntpl",
     "license": "proprietary",
     "minimum-stability": "dev",
     "require": {
         "php": "^7.1.3",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "friendsofsymfony/rest-bundle": "^2.5",
-        "friendsofsymfony/user-bundle": "^2.1",
-        "guzzlehttp/guzzle": "^6.3",
-        "jms/serializer-bundle": "^3.4",
-        "php-ai/php-ml": "^0.8.0",
-        "php7bundle/article": "dev-master",
-        "php7bundle/crypt": "v0.0.1",
-        "php7bundle/notify": "dev-master",
-        "php7bundle/queue": "dev-master",
-        "php7bundle/reference": "v0.0.1",
-        "php7bundle/storage": "dev-master",
-        "php7bundle/user": "dev-master",
+
+        "znsandbox/sandbox": "dev-master",
+
+        "znbundle/article": "dev-master",
+        "znbundle/messenger": "dev-master",
+        "znbundle/queue": "dev-master",
+        "znbundle/reference": "dev-master",
+        "znbundle/storage": "dev-master",
+        "znbundle/user": "dev-master",
+
+        "zncore/db": "dev-master",
+        "zncore/ddd": "dev-master",
+
+        "znlib/rest": "dev-master",
+        "znlib/socket": "dev-master",
+
+        "zncrypt/jwt": "dev-master",
+        "zncrypt/pki": "dev-master",
+        "zncrypt/tunnel": "dev-master",
+
         "php7lab/bundle": "v0.0.1",
-        "php7lab/eloquent": "v0.0.3",
-        "php7lab/rest": "v0.0.4",
-        "php7lab/sandbox": "v0.0.1",
         "php7lab/web": "v0.0.1",
-        "phpseclib/phpseclib": "^2.0",
-        "sensio/framework-extra-bundle": "^5.1",
+
         "symfony/asset": "4.*",
         "symfony/console": "4.*",
         "symfony/expression-language": "4.*",
@@ -46,11 +50,14 @@
         "symfony/validator": "4.*",
         "symfony/web-link": "4.*",
         "symfony/yaml": "4.*",
-        "workerman/workerman": "v4.0.6"
+        "sensio/framework-extra-bundle": "^5.1",
+        "jms/serializer-bundle": "^3.4",
+        "friendsofsymfony/rest-bundle": "^2.5",
+        "friendsofsymfony/user-bundle": "^2.1"
     },
     "require-dev": {
-        "php7lab/dev": "v0.0.2",
-        "php7lab/test": "v0.0.1",
+        "zntool/dev": "dev-master",
+        "zntool/test": "dev-master",
         "zndoc/rest-api": "v0.0.1",
         "symfony/debug-pack": "*",
         "symfony/profiler-pack": "*",
@@ -121,7 +128,7 @@
         },
         {
             "type": "git",
-            "url": "https://github.com/php7lab/sandbox.git"
+            "url": "https://github.com/znsandbox/sandbox.git"
         },
         {
             "type": "git",
@@ -129,23 +136,7 @@
         },
         {
             "type": "git",
-            "url": "https://github.com/php7lab/dev.git"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/php7lab/eloquent.git"
-        },
-        {
-            "type": "git",
             "url": "https://github.com/php7lab/bundle.git"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/php7lab/rest.git"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/php7lab/test.git"
         }
     ]
 }
