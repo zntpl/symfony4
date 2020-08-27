@@ -8,6 +8,8 @@
         "ext-iconv": "*",
 
         "znsandbox/sandbox": "dev-master",
+        "znsandbox/web": "dev-master",
+        "znsandbox/bundle": "dev-master",
 
         "znbundle/article": "dev-master",
         "znbundle/messenger": "dev-master",
@@ -25,9 +27,6 @@
         "zncrypt/jwt": "dev-master",
         "zncrypt/pki": "dev-master",
         "zncrypt/tunnel": "dev-master",
-
-        "php7lab/bundle": "v0.0.1",
-        "php7lab/web": "v0.0.1",
 
         "symfony/asset": "4.*",
         "symfony/console": "4.*",
@@ -132,11 +131,11 @@
         },
         {
             "type": "git",
-            "url": "https://github.com/php7lab/web.git"
+            "url": "https://github.com/znsandbox/bundle"
         },
         {
             "type": "git",
-            "url": "https://github.com/php7lab/bundle.git"
+            "url": "https://github.com/znsandbox/web"
         }
     ]
 }
