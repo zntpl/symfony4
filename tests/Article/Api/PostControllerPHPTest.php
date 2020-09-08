@@ -2,7 +2,7 @@
 
 namespace Tests\Article\Api;
 
-class PostControllerPHPTest extends \PhpLab\Sandbox\Tests\rest\Article\PostControllerTest
+class PostControllerPHPTest extends \ZnSandbox\Sandbox\Tests\rest\Article\PostControllerTest
 {
 
     protected $basePath = 'v1';

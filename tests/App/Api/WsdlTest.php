@@ -2,8 +2,8 @@
 
 namespace Tests\User\Api;
 
-use PhpLab\Sandbox\Wsdl\Symfony\Api\Controllers\HelloInterface;
-use PhpLab\Test\Base\BaseRestApiTest;
+use ZnSandbox\Sandbox\Wsdl\Symfony\Api\Controllers\HelloInterface;
+use ZnTool\Test\Base\BaseRestApiTest;
 
 class WsdlTest extends BaseRestApiTest
 {

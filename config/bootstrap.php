@@ -1,6 +1,6 @@
 <?php
 
-use PhpLab\Core\Libs\Env\DotEnvHelper;
+use ZnCore\Base\Libs\Env\DotEnvHelper;
 
 DotEnvHelper::init(__DIR__ . '/..');
 

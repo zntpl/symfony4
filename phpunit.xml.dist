@@ -16,63 +16,63 @@
             <directory>tests</directory>
         </testsuite>
 		
-		<!--<testsuite name="PhpLab\Bundle Test Suite">
+		<!--<testsuite name="ZnSandbox\Bundle Test Suite">
             <directory>vendor/php7lab/bundle/tests/</directory>
         </testsuite>-->
 
-        <testsuite name="PhpLab\Core Test Suite">
+        <testsuite name="ZnCore\Base Test Suite">
             <directory>vendor/php7lab/core/tests/</directory>
         </testsuite>
 
-        <testsuite name="PhpLab\Dev Test Suite">
+        <testsuite name="ZnTool\Dev Test Suite">
             <directory>vendor/php7lab/dev/tests/</directory>
         </testsuite>
 
-        <testsuite name="PhpLab\Eloquent Test Suite">
+        <testsuite name="ZnCore\Db Test Suite">
             <directory>vendor/php7lab/eloquent/tests/</directory>
         </testsuite>
 
-        <testsuite name="PhpLab\Rest Test Suite">
+        <testsuite name="ZnTool\Rest Test Suite">
             <directory>vendor/php7lab/rest/tests/</directory>
         </testsuite>
 
-        <!--<testsuite name="PhpLab\Sandbox Test Suite">
+        <!--<testsuite name="ZnSandbox\Sandbox Test Suite">
             <directory>vendor/php7lab/sandbox/tests/</directory>
         </testsuite>-->
 
-        <testsuite name="PhpLab\Test Test Suite">
+        <testsuite name="ZnTool\Test Test Suite">
             <directory>vendor/php7lab/test/tests/</directory>
         </testsuite>
 
-        <testsuite name="PhpLab\Web Test Suite">
+        <testsuite name="ZnSandbox\Web Test Suite">
             <directory>vendor/php7lab/web/tests/</directory>
         </testsuite>
 		
-		<testsuite name="PhpBundle\article Test Suite">
+		<testsuite name="ZnBundle\article Test Suite">
             <directory>vendor/php7bundle/article/tests/</directory>
         </testsuite>
 
-        <testsuite name="PhpBundle\crypt Test Suite">
+        <testsuite name="ZnCrypt\Base Test Suite">
             <directory>vendor/php7bundle/crypt/tests/</directory>
         </testsuite>
 
-        <testsuite name="PhpBundle\notify Test Suite">
+        <testsuite name="ZnBundle\notify Test Suite">
             <directory>vendor/php7bundle/notify/tests/</directory>
         </testsuite>
 
-        <testsuite name="PhpBundle\queue Test Suite">
+        <testsuite name="ZnBundle\queue Test Suite">
             <directory>vendor/php7bundle/queue/tests/</directory>
         </testsuite>
 
-        <testsuite name="PhpBundle\reference Test Suite">
+        <testsuite name="ZnBundle\reference Test Suite">
             <directory>vendor/php7bundle/reference/tests/</directory>
         </testsuite>
 
-        <testsuite name="PhpBundle\storage Test Suite">
+        <testsuite name="ZnBundle\storage Test Suite">
             <directory>vendor/php7bundle/storage/tests/</directory>
         </testsuite>
 
-        <testsuite name="PhpBundle\user Test Suite">
+        <testsuite name="ZnBundle\user Test Suite">
             <directory>vendor/php7bundle/user/tests/</directory>
         </testsuite>
     </testsuites>

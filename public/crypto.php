@@ -4,8 +4,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 use Illuminate\Container\Container;
-use PhpLab\Core\Libs\Env\DotEnvHelper;
-use PhpLab\Rest\Helpers\RestApiControllerHelper;
+use ZnCore\Base\Libs\Env\DotEnvHelper;
+use ZnLib\Rest\Helpers\RestApiControllerHelper;
 use Symfony\Component\Routing\RouteCollection;
 
 require_once __DIR__ . '/../src/Bootstrap/autoload.php';

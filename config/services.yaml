@@ -17,116 +17,116 @@ services:
         resource: '../src/*'
         exclude: '../src/{DependencyInjection,Entity,Migrations,Migration,Tests,Bootstrap,Kernel.php}'
 
-    PhpLab\Web\:
+    ZnSandbox\Web\:
         resource: '../vendor/php7lab/web/src/*'
         exclude: '../vendor/php7lab/web/src/{Base}'
 
-    PhpLab\Sandbox\:
+    ZnSandbox\Sandbox\:
         resource: '../vendor/php7lab/sandbox/src/*'
         exclude: '../vendor/php7lab/sandbox/src/{*/Yii,*/Domain/Migrations,*/Domain/Fixtures}'
 
-    PhpBundle\Article\:
+    ZnBundle\Article\:
         resource: '../vendor/php7bundle/article/src/*'
         exclude: '../vendor/php7bundle/article/src/{*/Migrations,*/Fixtures}'
 
-    PhpBundle\Crypt\:
+    ZnCrypt\Base\:
         resource: '../vendor/php7bundle/crypt/src/*'
         exclude: '../vendor/php7bundle/crypt/src/{*/Migrations,*/Fixtures}'
 
-    PhpBundle\Notify\:
+    ZnBundle\Notify\:
         resource: '../vendor/php7bundle/notify/src/*'
         exclude: '../vendor/php7bundle/notify/src/{*/Migrations,*/Fixtures}'
 
-    PhpBundle\Queue\:
+    ZnBundle\Queue\:
         resource: '../vendor/php7bundle/queue/src/*'
         exclude: '../vendor/php7bundle/queue/src/{*/Migrations,*/Fixtures}'
 
-    PhpBundle\Reference\:
+    ZnBundle\Reference\:
         resource: '../vendor/php7bundle/reference/src/*'
         exclude: '../vendor/php7bundle/reference/src/{*/Migrations,*/Fixtures}'
 
-    PhpBundle\Storage\:
+    ZnBundle\Storage\:
         resource: '../vendor/php7bundle/storage/src/*'
         exclude: '../vendor/php7bundle/storage/src/{*/Migrations,*/Fixtures}'
 
-    PhpBundle\User\:
+    ZnBundle\User\:
         resource: '../vendor/php7bundle/user/src/*'
         exclude: '../vendor/php7bundle/user/src/{*/Migrations,*/Fixtures}'
 
-    PhpBundle\Article\Symfony\Api\Controllers\ArticleController:
+    ZnBundle\Article\Symfony\Api\Controllers\ArticleController:
         tags: ['controller.service_arguments']
 
-#    PhpBundle\Article\Symfony\Web\Controllers\ArticleController:
+#    ZnBundle\Article\Symfony\Web\Controllers\ArticleController:
 #        tags: ['controller.service_arguments']
 
-#    PhpLab\Bundle\:
+#    ZnSandbox\Bundle\:
 #        resource: '../vendor/php7lab/bundle/src/*'
 #        exclude: '../vendor/php7lab/bundle/src/{*/Yii,*/Migrations,*/Fixtures}'
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
-#    PhpBundle\Storage\Symfony\Api\Controllers\FileController:
+#    ZnBundle\Storage\Symfony\Api\Controllers\FileController:
 #        tags: ['controller.service_arguments']
 
-    PhpLab\Sandbox\Messenger\Symfony\Api\Controllers\ChatController:
+    ZnBundle\Messenger\Symfony\Api\Controllers\ChatController:
         tags: ['controller.service_arguments']
 
-    PhpLab\Sandbox\Messenger\Symfony\Api\Controllers\MessageController:
+    ZnBundle\Messenger\Symfony\Api\Controllers\MessageController:
         tags: ['controller.service_arguments']
 
-    PhpLab\Sandbox\Messenger\Symfony\Web\Controllers\MessageController:
+    ZnBundle\Messenger\Symfony\Web\Controllers\MessageController:
         tags: ['controller.service_arguments']
 
-    PhpLab\Sandbox\Messenger\Domain\Interfaces\ChatRepositoryInterface:
-        class: PhpLab\Sandbox\Messenger\Domain\Repositories\Eloquent\ChatRepository
+    ZnBundle\Messenger\Domain\Interfaces\ChatRepositoryInterface:
+        class: ZnBundle\Messenger\Domain\Repositories\Eloquent\ChatRepository
         public: true
 
-    PhpBundle\User\Domain\Interfaces\UserRepositoryInterface:
-        class: PhpBundle\User\Domain\Repositories\Eloquent\UserRepository
+    ZnBundle\User\Domain\Interfaces\UserRepositoryInterface:
+        class: ZnBundle\User\Domain\Repositories\Eloquent\UserRepository
         public: true
 
-#    PhpLab\Sandbox\Bot\Symfony\Api\Controllers\ChatController:
+#    ZnSandbox\Sandbox\Bot\Symfony\Api\Controllers\ChatController:
 #        tags: ['controller.service_arguments']
 
-#    PhpLab\Sandbox\Messenger\Symfony\Web\Controllers\ChatController:
+#    ZnBundle\Messenger\Symfony\Web\Controllers\ChatController:
 #        tags: ['controller.service_arguments']
 
-#    PhpBundle\User\Symfony\Api\Controllers\AuthController:
+#    ZnBundle\User\Symfony\Api\Controllers\AuthController:
 #        tags: ['controller.service_arguments']
 
-#    PhpBundle\Queue\Symfony\Commands\RunCommand:
+#    ZnBundle\Queue\Symfony\Commands\RunCommand:
 #        tags: ['controller.service_arguments']
 
-    PhpLab\Eloquent\Db\Helpers\Manager:
+    ZnCore\Db\Helpers\Manager:
         arguments:
             $mainConfigFile: '%env(ELOQUENT_CONFIG_FILE)%'
 
-    PhpLab\Dev\Package\Domain\Repositories\File\GroupRepository:
+    ZnTool\Dev\Package\Domain\Repositories\File\GroupRepository:
         arguments:
             $fileName: '%env(ELOQUENT_CONFIG_FILE)%'
 
-    PhpLab\Rest\Controllers\ExceptionController:
+    ZnLib\Rest\Controllers\ExceptionController:
         public: true
         arguments:
             $debug: '%kernel.debug%'
 
-    PhpBundle\Notify\Domain\Interfaces\Repositories\EmailRepositoryInterface:
-        class: PhpBundle\Notify\Domain\Repositories\Dev\EmailRepository
+    ZnBundle\Notify\Domain\Interfaces\Repositories\EmailRepositoryInterface:
+        class: ZnBundle\Notify\Domain\Repositories\Dev\EmailRepository
         public: true
 
-    PhpLab\Sandbox\Dashboard\Domain\Interfaces\Services\DocServiceInterface:
-        class: PhpLab\Sandbox\Dashboard\Domain\Services\DocService
+    ZnSandbox\Sandbox\Dashboard\Domain\Interfaces\Services\DocServiceInterface:
+        class: ZnSandbox\Sandbox\Dashboard\Domain\Services\DocService
         public: true
 
-    PhpLab\Sandbox\Messenger\Domain\Interfaces\Services\MessageServiceInterface:
-        class: PhpLab\Sandbox\Messenger\Domain\Services\MessageService
+    ZnBundle\Messenger\Domain\Interfaces\Services\MessageServiceInterface:
+        class: ZnBundle\Messenger\Domain\Services\MessageService
         public: true
 
-    PhpBundle\Article\Domain\Interfaces\PostRepositoryInterface:
-        class: PhpBundle\Article\Domain\Repositories\Eloquent\PostRepository
+    ZnBundle\Article\Domain\Interfaces\PostRepositoryInterface:
+        class: ZnBundle\Article\Domain\Repositories\Eloquent\PostRepository
         public: true
 
-#    PhpBundle\Crypt\Domain\Interfaces\Services\JwtServiceInterface:
-#            class: PhpBundle\Crypt\Domain\Services\JwtService
+#    ZnCrypt\Jwt\Domain\Interfaces\Services\JwtServiceInterface:
+#            class: ZnCrypt\Jwt\Domain\Services\JwtService
 #            public: true

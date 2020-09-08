@@ -2,12 +2,12 @@
 
 namespace App\Bundle\Dashboard\Web\Controllers;
 
-use PhpLab\Core\Domain\Libs\Query;
-use PhpBundle\Article\Domain\Interfaces\PostServiceInterface;
-use PhpBundle\Notify\Domain\Entities\EmailEntity;
-use PhpBundle\Notify\Domain\Entities\SmsEntity;
-use PhpBundle\Notify\Domain\Interfaces\Services\EmailServiceInterface;
-use PhpBundle\Queue\Domain\Interfaces\Services\JobServiceInterface;
+use ZnCore\Base\Domain\Libs\Query;
+use ZnBundle\Article\Domain\Interfaces\PostServiceInterface;
+use ZnBundle\Notify\Domain\Entities\EmailEntity;
+use ZnBundle\Notify\Domain\Entities\SmsEntity;
+use ZnBundle\Notify\Domain\Interfaces\Services\EmailServiceInterface;
+use ZnBundle\Queue\Domain\Interfaces\Services\JobServiceInterface;
 use phpseclib\Crypt\AES;
 use phpseclib\Crypt\Base;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

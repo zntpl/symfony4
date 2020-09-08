@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Container\Container;
-use PhpLab\Core\Libs\Env\DotEnvHelper;
-use PhpLab\Rest\Helpers\RestApiControllerHelper;
+use ZnCore\Base\Libs\Env\DotEnvHelper;
+use ZnLib\Rest\Helpers\RestApiControllerHelper;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\RouteCollection;
 

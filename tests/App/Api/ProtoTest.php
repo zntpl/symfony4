@@ -2,6 +2,6 @@
 
 namespace Tests\App\Api;
 
-class ProtoTest extends \PhpLab\Sandbox\Tests\rest\Proto\ProtoTest
+class ProtoTest extends \ZnSandbox\Sandbox\Tests\rest\Proto\ProtoTest
 {
 }

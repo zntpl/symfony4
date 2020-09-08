@@ -1,3 +1,3 @@
 #index:
 #    path: /
-#    controller: PhpLab\Rest\Controllers\DefaultController::index
+#    controller: ZnLib\Rest\Controllers\DefaultController::index

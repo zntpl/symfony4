@@ -2,8 +2,8 @@
 
 namespace Tests\User\Web;
 
-use PhpLab\Core\Enums\Http\HttpStatusCodeEnum;
-use PhpLab\Test\Base\BaseRestWebTest;
+use ZnCore\Base\Enums\Http\HttpStatusCodeEnum;
+use ZnTool\Test\Base\BaseRestWebTest;
 
 class DashboardTest extends BaseRestWebTest
 {

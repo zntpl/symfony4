@@ -28,5 +28,5 @@ doctrine:
                 is_bundle: false
                 type: annotation
                 dir: '%kernel.project_dir%/vendor/php7bundle/user/src/Domain/Entities'
-                prefix: 'PhpBundle\User\Domain\Entities'
+                prefix: 'ZnBundle\User\Domain\Entities'
                 alias: App

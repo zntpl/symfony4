@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Container\Container;
-use PhpBundle\Article\Symfony\Api\ArticleModule;
+use ZnBundle\Article\Symfony\Api\ArticleModule;
 use Symfony\Component\Routing\RouteCollection;
 
 /**
