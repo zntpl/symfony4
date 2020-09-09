@@ -19,7 +19,7 @@
         "znbundle/user": "dev-master",
 
         "zncore/db": "dev-master",
-        "zncore/ddd": "dev-master",
+        "zncore/domain": "dev-master",
 
         "znlib/rest": "dev-master",
         "znlib/socket": "dev-master",
@@ -64,12 +64,10 @@
         "symfony/web-server-bundle": "4.*"
     },
     "config": {
-        "secure-http": false,
-        "process-timeout": 1800,
+        "sort-packages": true,
         "preferred-install": {
             "*": "dist"
-        },
-        "sort-packages": true
+        }
     },
     "autoload": {
         "psr-4": {
