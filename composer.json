@@ -8,7 +8,6 @@
         "ext-iconv": "*",
 
         "znsandbox/sandbox": "dev-master",
-        "znsandbox/bundle": "dev-master",
 
         "znbundle/article": "dev-master",
         "znbundle/messenger": "dev-master",
