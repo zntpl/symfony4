@@ -2,7 +2,7 @@
 
 namespace App\Bundle\Dashboard\Web\Controllers;
 
-use ZnCore\Base\Domain\Libs\Query;
+use ZnCore\Domain\Libs\Query;
 use ZnBundle\Article\Domain\Interfaces\PostServiceInterface;
 use ZnBundle\Notify\Domain\Entities\EmailEntity;
 use ZnBundle\Notify\Domain\Entities\SmsEntity;
