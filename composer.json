@@ -8,7 +8,6 @@
         "ext-iconv": "*",
 
         "znsandbox/sandbox": "dev-master",
-        "znsandbox/web": "dev-master",
         "znsandbox/bundle": "dev-master",
 
         "znbundle/article": "dev-master",
@@ -122,18 +121,6 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/znsandbox/sandbox.git"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/znsandbox/bundle"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/znsandbox/web"
         }
     ]
 }
