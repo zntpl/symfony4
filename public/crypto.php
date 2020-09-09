@@ -14,7 +14,7 @@ DotEnvHelper::init(__DIR__ . '/..');
 $container = Container::getInstance();
 $routeCollection = new RouteCollection;
 
-require_once __DIR__ . '/../vendor/php7bundle/crypt/src/Symfony/config/bootstrap.php';
+require_once __DIR__ . '/../../../../vendor/zncrypt/tunnel/src/Symfony/config/bootstrap.php';
 
 $response = RestApiControllerHelper::run($routeCollection, $container);
 $response->send();
