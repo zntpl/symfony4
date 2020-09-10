@@ -44,7 +44,7 @@
             <directory>vendor/php7lab/test/tests/</directory>
         </testsuite>
 
-        <testsuite name="ZnSandbox\Web Test Suite">
+        <testsuite name="ZnSandbox\Sandbox\Web\Symfony4 Test Suite">
             <directory>vendor/php7lab/web/tests/</directory>
         </testsuite>
 		
