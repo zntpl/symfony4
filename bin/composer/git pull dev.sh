@@ -2,9 +2,9 @@
 cd ../../vendor
 
 git clone "git@github.com:php7lab/core.git" "php7lab-dev/core"
-git clone "git@github.com:php7lab/eloquent.git" "php7lab-dev/eloquent"
+git clone "git@github.com:zncore/db.git" "php7lab-dev/eloquent"
 git clone "git@github.com:php7lab/bundle.git" "php7lab-dev/bundle"
-git clone "git@github.com:php7lab/dev.git" "php7lab-dev/dev"
+git clone "git@github.com:zntool/dev.git" "php7lab-dev/dev"
 git clone "git@github.com:php7lab/rest.git" "php7lab-dev/rest"
 git clone "git@github.com:php7lab/sandbox.git" "php7lab-dev/sandbox"
 git clone "git@github.com:php7lab/test.git" "php7lab-dev/test"

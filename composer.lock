@@ -3657,11 +3657,11 @@
             "time": "2020-03-19T17:45:46+00:00"
         },
         {
-            "name": "php7lab/eloquent",
+            "name": "zncore/db",
             "version": "v0.0.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/php7lab/eloquent.git",
+                "url": "https://github.com/zncore/db.git",
                 "reference": "ed55165736b659bf50b8522e73828c1e25a42073"
             },
             "require": {
@@ -9718,11 +9718,11 @@
             "time": "2017-03-05T17:38:23+00:00"
         },
         {
-            "name": "php7lab/dev",
+            "name": "zntool/dev",
             "version": "v0.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/php7lab/dev.git",
+                "url": "https://github.com/zntool/dev.git",
                 "reference": "ddfa21406197dd144d8ab804afe6ec64d8601da6"
             },
             "require-dev": {

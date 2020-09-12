@@ -25,11 +25,11 @@
         </testsuite>
 
         <testsuite name="ZnTool\Dev Test Suite">
-            <directory>vendor/php7lab/dev/tests/</directory>
+            <directory>vendor/zntool/dev/tests/</directory>
         </testsuite>
 
         <testsuite name="ZnCore\Db Test Suite">
-            <directory>vendor/php7lab/eloquent/tests/</directory>
+            <directory>vendor/zncore/db/tests/</directory>
         </testsuite>
 
         <testsuite name="ZnTool\Rest Test Suite">
