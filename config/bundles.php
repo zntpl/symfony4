@@ -24,5 +24,5 @@ return [
     ZnBundle\Notify\Symfony\NotifyBundle::class => ['all' => true],
     ZnSandbox\Sandbox\Web\Symfony4\WebBundle::class => ['all' => true],
     ZnSandbox\Bundle\Html\Symfony4\Admin\AdminBundle::class => ['all' => true],
-    ZnSandbox\Sandbox\Dashboard\Symfony\DashboardBundle::class => ['all' => true],
+    ZnBundle\Dashboard\Symfony\DashboardBundle::class => ['all' => true],
 ];
