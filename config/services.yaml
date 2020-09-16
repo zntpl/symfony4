@@ -17,7 +17,7 @@ services:
         resource: '../src/*'
         exclude: '../src/{DependencyInjection,Entity,Migrations,Migration,Tests,Bootstrap,Kernel.php}'
 
-    ZnSandbox\Sandbox\Web\Symfony4\:
+    ZnLib\Web\Symfony4\WebBundle\:
         resource: '../vendor/php7lab/web/src/*'
         exclude: '../vendor/php7lab/web/src/{Base}'
 

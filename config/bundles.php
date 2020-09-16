@@ -22,7 +22,7 @@ return [
     ZnSandbox\Sandbox\Wsdl\Symfony\WsdlBundle::class => ['all' => true],
     ZnBundle\User\Symfony\UserBundle::class => ['all' => true],
     ZnBundle\Notify\Symfony\NotifyBundle::class => ['all' => true],
-    ZnSandbox\Sandbox\Web\Symfony4\WebBundle::class => ['all' => true],
+    ZnLib\Web\Symfony4\WebBundle\WebBundle::class => ['all' => true],
     ZnLib\Web\Symfony4\Admin\AdminBundle::class => ['all' => true],
     ZnBundle\Dashboard\Symfony\DashboardBundle::class => ['all' => true],
 ];
