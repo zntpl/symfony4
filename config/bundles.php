@@ -23,6 +23,6 @@ return [
     ZnBundle\User\Symfony\UserBundle::class => ['all' => true],
     ZnBundle\Notify\Symfony\NotifyBundle::class => ['all' => true],
     ZnSandbox\Sandbox\Web\Symfony4\WebBundle::class => ['all' => true],
-    ZnSandbox\Bundle\Html\Symfony4\Admin\AdminBundle::class => ['all' => true],
+    ZnLib\Web\Symfony4\Admin\AdminBundle::class => ['all' => true],
     ZnBundle\Dashboard\Symfony\DashboardBundle::class => ['all' => true],
 ];
