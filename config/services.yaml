@@ -53,10 +53,10 @@ services:
         resource: '../vendor/php7bundle/user/src/*'
         exclude: '../vendor/php7bundle/user/src/{*/Migrations,*/Fixtures}'
 
-    ZnBundle\Article\Symfony\Api\Controllers\ArticleController:
+    ZnBundle\Article\Symfony4\Api\Controllers\ArticleController:
         tags: ['controller.service_arguments']
 
-#    ZnBundle\Article\Symfony\Web\Controllers\ArticleController:
+#    ZnBundle\Article\Symfony4\Web\Controllers\ArticleController:
 #        tags: ['controller.service_arguments']
 
 #    ZnSandbox\Bundle\:
@@ -66,16 +66,16 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
-#    ZnBundle\Storage\Symfony\Api\Controllers\FileController:
+#    ZnBundle\Storage\Symfony4\Api\Controllers\FileController:
 #        tags: ['controller.service_arguments']
 
-    ZnBundle\Messenger\Symfony\Api\Controllers\ChatController:
+    ZnBundle\Messenger\Symfony4\Api\Controllers\ChatController:
         tags: ['controller.service_arguments']
 
-    ZnBundle\Messenger\Symfony\Api\Controllers\MessageController:
+    ZnBundle\Messenger\Symfony4\Api\Controllers\MessageController:
         tags: ['controller.service_arguments']
 
-    ZnBundle\Messenger\Symfony\Web\Controllers\MessageController:
+    ZnBundle\Messenger\Symfony4\Web\Controllers\MessageController:
         tags: ['controller.service_arguments']
 
     ZnBundle\Messenger\Domain\Interfaces\ChatRepositoryInterface:
@@ -89,13 +89,13 @@ services:
 #    ZnSandbox\Sandbox\Bot\Symfony\Api\Controllers\ChatController:
 #        tags: ['controller.service_arguments']
 
-#    ZnBundle\Messenger\Symfony\Web\Controllers\ChatController:
+#    ZnBundle\Messenger\Symfony4\Web\Controllers\ChatController:
 #        tags: ['controller.service_arguments']
 
-#    ZnBundle\User\Symfony\Api\Controllers\AuthController:
+#    ZnBundle\User\Symfony4\Api\Controllers\AuthController:
 #        tags: ['controller.service_arguments']
 
-#    ZnBundle\Queue\Symfony\Commands\RunCommand:
+#    ZnBundle\Queue\Symfony4\Commands\RunCommand:
 #        tags: ['controller.service_arguments']
 
     ZnCore\Db\Helpers\Manager:

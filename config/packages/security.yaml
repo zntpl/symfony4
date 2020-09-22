@@ -5,7 +5,7 @@ security:
     providers:
         in_memory: { memory: null }
         api_key_user_provider:
-            id: ZnBundle\User\Symfony\Api\Security\ApiKeyUserProvider
+            id: ZnBundle\User\Symfony4\Api\Security\ApiKeyUserProvider
         fos_userbundle:
             id: fos_user.user_provider.username
     firewalls:
@@ -16,7 +16,7 @@ security:
             pattern: ^/api
             stateless: true
             simple_preauth:
-                authenticator: ZnBundle\User\Symfony\Api\Security\ApiKeyAuthenticator
+                authenticator: ZnBundle\User\Symfony4\Api\Security\ApiKeyAuthenticator
             provider: api_key_user_provider
         main:
             pattern: ^/
