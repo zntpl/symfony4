@@ -106,7 +106,7 @@ services:
         arguments:
             $fileName: '%env(ELOQUENT_CONFIG_FILE)%'
 
-    ZnLib\Rest\Controllers\ExceptionController:
+    ZnLib\Rest\Symfony4\Controllers\ExceptionController:
         public: true
         arguments:
             $debug: '%kernel.debug%'

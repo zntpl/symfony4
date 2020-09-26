@@ -2,26 +2,21 @@
 
 use App\Kernel;
 use Illuminate\Support\Collection;
-use ZnCrypt\Base\Domain\Enums\EncryptAlgorithmEnum;
+use Symfony\Component\Cache\Adapter\FilesystemAdapter;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use ZnCrypt\Base\Domain\Libs\Encoders\AesAdvancedEncoder;
-use ZnCrypt\Base\Domain\Libs\Encoders\AesEncoder;
-use ZnCrypt\Base\Domain\Libs\Encoders\Base64Encoder;
 use ZnCrypt\Base\Domain\Libs\Encoders\CollectionEncoder;
 use ZnCrypt\Base\Domain\Libs\Encoders\CryptoEncoder;
-use ZnCrypt\Base\Domain\Libs\Encoders\GzEncoder;
-use ZnCrypt\Base\Domain\Libs\Encoders\JsonEncoder;
 use ZnCrypt\Base\Domain\Libs\Rsa\Rsa;
 use ZnCrypt\Base\Domain\Libs\Tunnel\JsonFormatter;
 use ZnCrypt\Base\Domain\Libs\Tunnel\StringFormatter;
 use ZnLib\Rest\Helpers\CorsHelper;
+use ZnLib\Rest\Symfony4\Helpers\SymfonyRequestHelper;
 use ZnSandbox\Sandbox\Proto\Libs\RestProto;
-use Symfony\Component\HttpFoundation\Request;
-use ZnLib\Rest\Helpers\SymfonyRequestHelper;
-use Symfony\Component\Cache\Adapter\FilesystemAdapter;
-use Symfony\Component\HttpFoundation\Response;
 
 require_once __DIR__ . '/../src/Bootstrap/autoload.php';
-require_once dirname(__DIR__).'/config/bootstrap.php';
+require_once dirname(__DIR__) . '/config/bootstrap.php';
 
 CorsHelper::autoload();
 
@@ -31,7 +26,7 @@ $uri = trim($_SERVER['REQUEST_URI'], '/');
 //$isCrypt = strpos($uri, 'api/') === 0;
 $cryptSessionId = $_SERVER['HTTP_X_CRYPT_SESSION'] ?: null;
 
-if($cryptSessionId) {
+if ($cryptSessionId) {
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
 
@@ -47,7 +42,7 @@ if($cryptSessionId) {
 
     $secretKey = $session->get('secretKey');
     //dd($secretKey);
-    if(empty($secretKey)) {
+    if (empty($secretKey)) {
         $response = new Response('Empty secret key! Go to hand hake!', 401);
         $response->send();
         exit;
@@ -80,12 +75,12 @@ dd($out);*/
 
 SymfonyRequestHelper::prepareRequest();
 
-$kernel = new Kernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']);
+$kernel = new Kernel($_SERVER['APP_ENV'], (bool)$_SERVER['APP_DEBUG']);
 $request = Request::createFromGlobals();
 $response = $kernel->handle($request);
 
 // todo: make hook
-if($cryptSessionId) {
+if ($cryptSessionId) {
     $response = $restProto->encodeResponse($response);
 }
 // todo: end hook

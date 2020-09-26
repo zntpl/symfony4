@@ -2,7 +2,7 @@
 
 use Illuminate\Container\Container;
 use ZnCore\Base\Libs\Env\DotEnvHelper;
-use ZnLib\Rest\Helpers\RestApiControllerHelper;
+use ZnLib\Rest\Symfony4\Helpers\RestApiControllerHelper;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\RouteCollection;
 
