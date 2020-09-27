@@ -16,11 +16,13 @@
         "znbundle/storage": "dev-master",
         "znbundle/user": "dev-master",
 
-        "zncore/db": "dev-master",
         "zncore/domain": "dev-master",
 
         "znlib/rest": "dev-master",
         "znlib/socket": "dev-master",
+        "znlib/db": "dev-master",
+        "znlib/migration": "dev-master",
+        "znlib/fixture": "dev-master",
 
         "zncrypt/jwt": "dev-master",
         "zncrypt/pki": "dev-master",
