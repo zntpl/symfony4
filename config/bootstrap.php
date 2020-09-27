@@ -1,8 +1,8 @@
 <?php
 
-use ZnCore\Base\Libs\Env\DotEnvHelper;
+use ZnCore\Base\Libs\DotEnv\DotEnv;
 
-DotEnvHelper::init(__DIR__ . '/..');
+DotEnv::init(__DIR__ . '/..');
 
 $_SERVER += $_ENV;
 $_SERVER['APP_ENV'] = $_ENV['APP_ENV'] = ($_SERVER['APP_ENV'] ?? $_ENV['APP_ENV'] ?? null) ?: 'dev';
