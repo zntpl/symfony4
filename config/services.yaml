@@ -102,7 +102,7 @@ services:
         arguments:
             $mainConfigFile: '%env(ELOQUENT_CONFIG_FILE)%'
 
-    ZnTool\Dev\Package\Domain\Repositories\File\GroupRepository:
+    ZnTool\Package\Domain\Repositories\File\GroupRepository:
         arguments:
             $fileName: '%env(ELOQUENT_CONFIG_FILE)%'
 
