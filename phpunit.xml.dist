@@ -28,7 +28,7 @@
             <directory>vendor/zntool/dev/tests/</directory>
         </testsuite>
 
-        <testsuite name="ZnCore\Db Test Suite">
+        <testsuite name="ZnLib\Db Test Suite">
             <directory>vendor/zncore/db/tests/</directory>
         </testsuite>
 

@@ -98,7 +98,7 @@ services:
 #    ZnBundle\Queue\Symfony4\Commands\RunCommand:
 #        tags: ['controller.service_arguments']
 
-    ZnCore\Db\Helpers\Manager:
+    ZnLib\Db\Helpers\Manager:
         arguments:
             $mainConfigFile: '%env(ELOQUENT_CONFIG_FILE)%'
 
